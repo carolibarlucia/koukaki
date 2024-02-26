@@ -1,0 +1,303 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.main-navigation {
+  z-index: 1000;
+  background-color: $color__navigation_bg;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+  button {
+    border: 0;
+    background-color: transparent;
+    margin: auto;
+    text-align: right;
+  }
+
+  .line {
+    height: 3px;
+    background-color: #000;
+    display: block;
+    text-align: right;
+    margin: auto;
+    margin-block: 2px;
+    width: 20px;
+  }
+
+  li {
+    position: relative;
+    font-size: 14px;
+    &:hover > a,
+    &.focus > a {
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a,
+  .current-menu-ancestor > a {
+  }
+  .site-title {
+    font-family: $font__titles;
+    font-size: 21.5px;
+    vertical-align: middle;
+  }
+
+  .burger {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: #000;
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-6px);
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #000;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(6px);
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #000;
+      }
+    }
+  }
+  .cross {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: $color__navigation_bg;
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(0) rotate(45deg);
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: #000;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(0) rotate(-45deg);
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: #000;
+      }
+    }
+  }
+}
+
+.hidden-menu {
+  display: none;
+}
+
+.visible-menu {
+  overflow: hidden;
+  padding-top: 112px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 800px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  background-color: #fff5e9;
+  animation-name: apparitionMenu;
+  animation-duration: 1s;
+  @keyframes apparitionMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 36px;
+    line-height: 2em;
+  }
+  a:hover {
+    color: #000;
+    text-shadow: #ff5c00 0 0 14px;
+  }
+  P {
+    font-size: 14px;
+    line-height: 10em;
+    padding-bottom: 20px;
+  }
+
+  .orchid {
+    position: relative;
+    width: 40%;
+    left: -70px;
+    top: -160px;
+    animation-name: rotating;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .flower {
+    position: relative;
+    left: 150px;
+    top: -50px;
+    width: 15%;
+    animation-name: rotating2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .sunflower {
+    position: relative;
+    top: 10px;
+    width: 50%;
+    animation-name: rotating2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .randomFlower {
+    position: relative;
+    top: 90px;
+    right: -50%;
+    width: 15%;
+    animation-name: rotating;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .hibiscus {
+    position: relative;
+    float: right;
+    width: 150%;
+    bottom: -120px;
+    right: -250px;
+    animation-name: rotating;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .kawaneko {
+    position: relative;
+    top: -200px;
+    left: 250px;
+    width: 30%;
+    animation-name: flottement;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  .orenjiiro {
+    position: relative;
+    width: 25%;
+    // left: 20px;
+    top: 50px;
+    animation-name: flottement;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  .jaakuna {
+    position: relative;
+    width: 30%;
+    top: 100px;
+    right: 20px;
+    animation-name: flottement;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  .logo-header {
+    position: relative;
+    text-align: center;
+    top: -90px;
+    width: 50%;
+  }
+
+  .fleurs-menu {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  .site-main & {
+    margin: 0 0 1.5em;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-previous {
+    flex: 1 0 50%;
+  }
+
+  .nav-next {
+    text-align: end;
+    flex: 1 0 50%;
+  }
+}
